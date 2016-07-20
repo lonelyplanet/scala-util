@@ -5,8 +5,8 @@ import ch.qos.logback.classic.Level;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class StdOutFilterA extends Filter {
-    private static HashSet<Level> allowed = new HashSet<>(Arrays.asList(Level.TRACE, Level.DEBUG, Level.INFO));
+public class StdErrFilter extends Filter {
+    private static HashSet<Level> allowed = new HashSet<>(Arrays.asList(Level.WARN, Level.ERROR));
 
     @Override
     boolean isAllowed(Level level) {
