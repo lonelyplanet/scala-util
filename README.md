@@ -1,4 +1,6 @@
 # scala-util
+
+[![Join the chat at https://gitter.im/lonelyplanet/scala-util](https://badges.gitter.im/lonelyplanet/scala-util.svg)](https://gitter.im/lonelyplanet/scala-util?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A collections of random Scala utilities
 
   [ ![Download](https://api.bintray.com/packages/lonelyplanet/maven/scala-util/images/download.svg) ](https://bintray.com/lonelyplanet/maven/scala-util/_latestVersion)
