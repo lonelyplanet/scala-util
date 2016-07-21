@@ -15,8 +15,12 @@ resolvers += "Sonatype release repository" at "https://oss.sonatype.org/content/
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 libraryDependencies ++= {
+  val scalaTestVersion      = "3.0.0-M15"
+  val logbackClassicVersion = "1.1.6"
+
   Seq(
-    "ch.qos.logback"       %  "logback-classic"                      % "1.1.6" % "provided"
+    "ch.qos.logback"       %  "logback-classic"                      % logbackClassicVersion % "provided",
+    "org.scalatest"        %% "scalatest"                            % scalaTestVersion % "test"
   )
 }
 
