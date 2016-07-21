@@ -5,8 +5,8 @@ import OptionConversions._
 
 class OptionConversionsSpec extends FlatSpec with Matchers {
   it should "wrap in Option" in {
-    wrapOption(10, condition = true) shouldBe Some(10)
-    wrapOption(10, condition = false) shouldBe None
+    wrapOption(condition = true, 10) shouldBe Some(10)
+    wrapOption(condition = false, 10) shouldBe None
   }
 
   it should "wrap String in Option" in {
