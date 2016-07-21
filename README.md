@@ -5,7 +5,7 @@ A collections of random Scala utilities
 
   [ ![Download](https://api.bintray.com/packages/lonelyplanet/maven/scala-util/images/download.svg) ](https://bintray.com/lonelyplanet/maven/scala-util/_latestVersion)
 
-    "com.lonelyplanet" %% "scala-util" % "0.1.3"
+    "com.lonelyplanet" %% "scala-util" % "0.1.4"
 
 ### Publishing
 
