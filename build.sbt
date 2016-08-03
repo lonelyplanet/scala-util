@@ -6,7 +6,7 @@ name := "scala-util"
 
 organization := "com.lonelyplanet"
 
-version := "0.1.6"
+version := "0.1.7"
 
 scalaVersion := "2.11.8"
 
@@ -20,6 +20,7 @@ libraryDependencies ++= {
 
   Seq(
     "ch.qos.logback"       %  "logback-classic"                      % logbackClassicVersion % "provided",
+    ("com.github.tkawachi" %  "exhash-logback"                       % "0.0.4").exclude("ch.qos.logback", "logback-classic"),
     "org.scalatest"        %% "scalatest"                            % scalaTestVersion % "test"
   )
 }
