@@ -5,7 +5,7 @@ import ch.qos.logback.core.CoreConstants;
 
 public class KibanaLinkConverter extends StackTraceHashConverter {
 
-    private final static String kibanaFormat = "<a href=\"%s/api/v1/proxy/namespaces/kube-system/services/kibana-logging/?#/discover?_g=()&_a=(columns:!(kubernetes.pod_name,hash,message,stack_trace),index:'logstash-*',interval:auto,query:(query_string:(analyze_wildcard:!t,query:'hash:%%22%s%%22')),sort:!('@timestamp',desc))\" target=\"_blank\">Kibana Link</a>";
+    private final static String kibanaFormat = "<a href=\"%s/api/v1/proxy/namespaces/kube-system/services/kibana-logging/?#/discover?_g=()&_a=(columns:!(kubernetes.pod_name,hash,message,stack_trace),index:'logstash-*',interval:now-7d,query:(query_string:(analyze_wildcard:!t,query:'hash:%%22%s%%22')),sort:!('@timestamp',desc))\" target=\"_blank\">Kibana Link</a>";
     private String apiHost;
 
     @Override
