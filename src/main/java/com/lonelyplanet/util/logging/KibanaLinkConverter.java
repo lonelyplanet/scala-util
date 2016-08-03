@@ -16,7 +16,12 @@ public class KibanaLinkConverter extends StackTraceHashConverter {
     @Override
     public String convert(ILoggingEvent event) {
         String hash = super.convert(event);
-        return createKibanaLink(hash);
+
+        if (hash != null && !hash.equals("")) {
+            return createKibanaLink(hash);
+        } else {
+            return "";
+        }
     }
 
     private String createKibanaLink(String hash) {
