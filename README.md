@@ -8,7 +8,7 @@
 A collections of random Scala utilities
 
 
-    "com.lonelyplanet" %% "scala-util" % "0.1.7"
+    "com.lonelyplanet" %% "scala-util" % "0.1.8"
 
 ### Publishing
 
