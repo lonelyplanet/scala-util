@@ -20,6 +20,7 @@ libraryDependencies ++= {
 
   Seq(
     "ch.qos.logback"       %  "logback-classic"                      % logbackClassicVersion % "provided",
+    "net.logstash.logback" %  "logstash-logback-encoder"             % "4.7" % "provided",
     ("com.github.tkawachi" %  "exhash-logback"                       % "0.0.4").exclude("ch.qos.logback", "logback-classic"),
     "org.scalatest"        %% "scalatest"                            % scalaTestVersion % "test"
   )
