@@ -15,10 +15,11 @@ resolvers += "Sonatype release repository" at "https://oss.sonatype.org/content/
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
 libraryDependencies ++= {
-  val scalaTestVersion      = "3.0.0-M15"
+  val scalaTestVersion      = "3.0.0"
   val logbackClassicVersion = "1.1.6"
 
   Seq(
+    "io.airbrake"          % "airbrake-java"                         % "2.2.8",
     "ch.qos.logback"       %  "logback-classic"                      % logbackClassicVersion % "provided",
     "net.logstash.logback" %  "logstash-logback-encoder"             % "4.7" % "provided",
     ("com.github.tkawachi" %  "exhash-logback"                       % "0.0.4").exclude("ch.qos.logback", "logback-classic"),
