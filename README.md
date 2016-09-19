@@ -10,6 +10,19 @@ A collections of random Scala utilities
 
     "com.lonelyplanet" %% "scala-util" % "0.1.11"
 
+# What's included:
+#### URI Matches for scalatest
+A simple matcher that provides more custom matching rules for URIs, for example: matching URIs without looking at the ordering of query parameters (which wouldn't work if you just compare `String`s)
+
+#### Std{Err,Out}Filter
+A logback filter that redirects `ERROR` and `WARN` logs to `stderr` and, `TRACE`, `DEBUG`, `INFO` are redirected to `stdout`
+
+#### AirbrakeService
+A simple wrapper that is used to send notifications about errors to Airbrake
+
+#### OptionConversions
+A collection of utilities for converting `Option`s
+
 ### Publishing
 
 We use `bintray-sbt` plugin for publishing artifacts, to publish newer version of the library run:
