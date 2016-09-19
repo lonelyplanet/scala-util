@@ -6,7 +6,7 @@ name := "scala-util"
 
 organization := "com.lonelyplanet"
 
-version := "0.1.9"
+version := "0.1.10"
 
 scalaVersion := "2.11.8"
 
