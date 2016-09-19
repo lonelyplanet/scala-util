@@ -32,3 +32,6 @@ trait URIMatchers {
    */
   def matchIgnoreParameterOrdering(expected: String) = new URIMatcher(expected)
 }
+
+// Companion object to simplify importing
+object URIMatchers extends URIMatchers
