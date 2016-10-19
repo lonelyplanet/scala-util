@@ -10,6 +10,14 @@ A collections of random Scala utilities
 
     "com.lonelyplanet" %% "scala-util" % "0.1.11"
 
+You might need to also add our repository:
+
+```
+resolvers ++= Seq(
+  Resolver.bintrayRepo("lonelyplanet", "maven")
+)
+```
+
 # What's included:
 #### URI Matches for scalatest
 A simple matcher that provides more custom matching rules for URIs, for example: matching URIs without looking at the ordering of query parameters (which wouldn't work if you just compare `String`s)
