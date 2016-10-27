@@ -21,8 +21,6 @@ libraryDependencies ++= {
   Seq(
     "io.airbrake"          % "airbrake-java"                         % "2.2.8",
     "ch.qos.logback"       %  "logback-classic"                      % logbackClassicVersion % "provided",
-    "net.logstash.logback" %  "logstash-logback-encoder"             % "4.7" % "provided",
-    ("com.github.tkawachi" %  "exhash-logback"                       % "0.0.4").exclude("ch.qos.logback", "logback-classic"),
     "org.scalatest"        %% "scalatest"                            % scalaTestVersion % "provided",
     "com.netaporter"       %% "scala-uri"                            % "0.4.14"
   )
