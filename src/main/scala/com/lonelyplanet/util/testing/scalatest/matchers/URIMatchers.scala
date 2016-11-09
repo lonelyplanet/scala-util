@@ -1,6 +1,6 @@
 package com.lonelyplanet.util.testing.scalatest.matchers
 
-import com.netaporter.uri.Uri.parse
+import akka.http.scaladsl.model.Uri
 import org.scalatest.matchers.{MatchResult, Matcher}
 
 /**
@@ -9,11 +9,10 @@ import org.scalatest.matchers.{MatchResult, Matcher}
 trait URIMatchers {
   class URIMatcher(expected: String) extends Matcher[String] {
     private def compareURI(a: String, b: String) = {
-      val aParsed = parse(a)
-      val bParsed = parse(b)
+      val aParsed = Uri(a)
+      val bParsed = Uri(b)
 
-      aParsed.path == bParsed.path &&
-        aParsed.query.paramMap == bParsed.query.paramMap
+      aParsed.path == bParsed.path && aParsed.query().toMap == bParsed.query().toMap
     }
 
     override def apply(left: String): MatchResult = {
