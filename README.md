@@ -8,7 +8,7 @@
 A collections of random Scala utilities
 
 
-    "com.lonelyplanet" %% "scala-util" % "0.2.0"
+    "com.lonelyplanet" %% "scala-util" % "0.2.1"
 
 You might need to also add our repository:
 
