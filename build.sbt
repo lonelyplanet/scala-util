@@ -6,7 +6,7 @@ name := "scala-util"
 
 organization := "com.lonelyplanet"
 
-version := "0.2.1"
+version := "0.2.2"
 
 scalaVersion := "2.11.8"
 
@@ -17,7 +17,7 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 libraryDependencies ++= {
   val scalaTestVersion      = "3.0.0"
   val logbackClassicVersion = "1.1.6"
-  val akkaHttpVersion  = "10.0.0"
+  val akkaHttpVersion       = "10.0.0"
 
   Seq(
     "io.airbrake"          % "airbrake-java"                         % "2.2.8",
