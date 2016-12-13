@@ -17,13 +17,13 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 libraryDependencies ++= {
   val scalaTestVersion      = "3.0.0"
   val logbackClassicVersion = "1.1.6"
-  val akkaVersion  = "2.4.11"
+  val akkaHttpVersion  = "10.0.0"
 
   Seq(
     "io.airbrake"          % "airbrake-java"                         % "2.2.8",
     "ch.qos.logback"       %  "logback-classic"                      % logbackClassicVersion % "provided",
     "org.scalatest"        %% "scalatest"                            % scalaTestVersion % "provided",
-    "com.typesafe.akka"    %% "akka-http-core"                       % akkaVersion
+    "com.typesafe.akka"    %% "akka-http-core"                       % akkaHttpVersion
   )
 }
 
