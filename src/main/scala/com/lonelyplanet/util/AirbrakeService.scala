@@ -3,9 +3,9 @@ package com.lonelyplanet.util
 import airbrake.{AirbrakeNoticeBuilder, AirbrakeNotifier}
 import com.lonelyplanet.util.logging.Loggable
 
-class AirbrakeService(key: String, environment: String) extends Loggable {
+class AirbrakeService(apiKey: String, environment: String) extends Loggable {
   private val notifier: AirbrakeNotifier = new AirbrakeNotifier()
-  private val isAirbrakeConfigured = key != ""
+  private val isAirbrakeConfigured = apiKey != ""
 
   if (!isAirbrakeConfigured) {
     logger.warn("Airbrake key is not configured")
@@ -13,9 +13,19 @@ class AirbrakeService(key: String, environment: String) extends Loggable {
     logger.info("Airbrake configured correctly")
   }
 
-  def notify(e: Throwable) = {
+  def notify(error: Throwable, url: String, component: String): Unit = {
     if (isAirbrakeConfigured) {
-      val notice = new AirbrakeNoticeBuilder(key, e, environment).newNotice()
+      val notice = new AirbrakeNoticeWithUrlBuilder(apiKey, error, environment)
+        .withUrl(url, component)
+        .build()
+
+      notifier.notify(notice)
+    }
+  }
+
+  def notify(error: Throwable): Unit = {
+    if (isAirbrakeConfigured) {
+      val notice = new AirbrakeNoticeBuilder(apiKey, error, environment).newNotice()
       notifier.notify(notice)
     }
   }
